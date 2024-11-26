@@ -1,13 +1,16 @@
 ---
-   name: testing the command module for creation of the file in linux under centos 
+ - name: testing the command module for creation of the file in linux under centos
+
    hosts: 192.168.56.8
+
    become: yes
+
    tasks:
-    - name: creation of the testfile
-      ansible.builtin.file:
-      path: /ansible_workdir/testfile
-      state: file
-      mode: '0655'
+     - name: creation of the testfile
+       file:
+         path: /ansible_workdir/testfile
+         state: directory
+         mode: '777'
 
    
 
