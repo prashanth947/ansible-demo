@@ -5,7 +5,7 @@
    tasks:
     - name: creation of the testfile
       ansible.builtin.file:
-      path: /home/pkavet
+      path: /ansible_workdir/testfile
       state: file
       mode: '0655'
 
