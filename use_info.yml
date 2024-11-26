@@ -1,0 +1,12 @@
+---
+- name: Use information from gather_info playbook
+  hosts: 192.168.56.8
+  vars:
+    ansible_python_interpreter: /usr/bin/python3  
+  tasks:
+    - name: Import information from gather_info playbook
+      include_tasks: hierarchy_test.yml    
+    
+    - name: Display hostname
+      debug:
+        msg: "Hostname is {{ hostname }}"
